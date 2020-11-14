@@ -8,4 +8,11 @@
     <string name="cancel_button">Cancel</string>
     <string name="pressed_ok">Pressed OK</string>
     <string name="pressed_cancel">Pressed Cancel</string>
+    <string name="pick_color">Pick color</string>
+    <string-array name="bands_array">
+        <item>The Cranberries</item>
+        <item>Texas</item>
+        <item>The Housemartins</item>
+        <item>Teenage Fan Club</item>
+    </string-array>
 </resources>

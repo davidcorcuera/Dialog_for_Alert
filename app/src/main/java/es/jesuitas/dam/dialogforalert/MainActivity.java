@@ -20,23 +20,13 @@ public class MainActivity extends AppCompatActivity {
         AlertDialog.Builder myAlertBuilder = new
                 AlertDialog.Builder(MainActivity.this);
         // Set the dialog title and message.
-        myAlertBuilder.setTitle(R.string.alert_title);
-        myAlertBuilder.setMessage(R.string.alert_message);
-
-        myAlertBuilder.setPositiveButton(R.string.ok_button, new DialogInterface.OnClickListener() {
+        myAlertBuilder.setTitle(R.string.pick_color);
+        myAlertBuilder.setItems(R.array.bands_array, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                // User clicked OK button.
-                Toast.makeText(getApplicationContext(), R.string.pressed_ok,
-                        Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        myAlertBuilder.setNegativeButton(R.string.cancel_button, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                // User clicked Cancel button.
-                Toast.makeText(getApplicationContext(), R.string.pressed_cancel,
+                String band;
+                band = getResources().getStringArray(R.array.bands_array)[i];
+                Toast.makeText(getApplicationContext(), band,
                         Toast.LENGTH_SHORT).show();
             }
         });
